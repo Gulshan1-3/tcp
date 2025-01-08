@@ -13,7 +13,12 @@ fn main() -> io::Result<()>{
       Ok(i) =>{
         let src = i.source_addr();
         let dst = i.destination_addr();
-        let proto = i.protocol();
+        let proto = i.protocol(); 
+        if i.protocol() != 0x06 {
+          eprintln!("BAD PROTOCOL");
+          // not tcp
+          continue;
+      }
       }
       Err(e) => {
         eprintln!("ignore these packets {:?}",e)
