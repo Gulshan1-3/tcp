@@ -1,7 +1,4 @@
-
-
 use std::io;
-
 fn main() -> io::Result<()>{
   let nic =  tun_tap::Iface::new("mytun",tun_tap::Mode::Tun)?;
   let mut buf = [0u8;1504];
