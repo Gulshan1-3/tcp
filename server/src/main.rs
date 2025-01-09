@@ -35,11 +35,11 @@ fn main() -> io::Result<()>{
       }
       match etherparse::TcpHeaderSlice::from_slice(&buf[i.slice().len()..nbytes]) {
         Ok(TCP) {
-          
+
         }
       }
     }
 
   Ok(())
 }
-}
+
